@@ -1,0 +1,24 @@
+// Напишете програма, която прочита цяло число и отпечатва най-голямата му цифра.
+
+#include <iostream>
+
+int main() {
+	int number;
+	
+
+	std::cout << "Please enter a number: ";
+	std::cin >> number;
+
+	int maxDigit = number%10;
+
+	while (number > 0) {
+		number /= 10;
+		if (maxDigit < number % 10) {
+			maxDigit = number % 10;
+		}
+	}
+
+	std::cout << "The bigget digit in your number is: " << maxDigit;
+
+	return 0;
+}
