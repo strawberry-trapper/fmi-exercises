@@ -1,0 +1,21 @@
+// Напишете програма, която прочита цяло число и отпечатва сбора от цифрите му.
+
+#include <iostream>
+
+int main()
+{
+    int number;
+    int sumOfDigits = 0;
+
+    std::cout << "Please enter a number: ";
+    std::cin >> number;
+
+    while (number > 0) {
+        sumOfDigits += number % 10;
+        number /= 10;
+    }
+
+    std::cout << "The sum of digits in your number is " << sumOfDigits;
+    
+    return 0;
+}
